@@ -11,7 +11,6 @@ class Home extends React.Component {
       showModal: false,
       appointment: '',
 
-
     }
   }
 
@@ -60,6 +59,7 @@ class Home extends React.Component {
 
     this.postAppointment(scheduleObj);
   }
+  
 
   // *** handler 2 - posts to the database ***
   // postAppointment = async (scheduleObj) => {
