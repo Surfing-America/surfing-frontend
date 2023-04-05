@@ -11,30 +11,27 @@ class ScheduleForm extends React.Component {
           </Modal.Header> 
           <Modal.Body> 
             <Form onSubmit={this.props.handleAppointmentSubmit}>
-              <Form.Group controlId='date'>
-                <Form.Label>Add Date:</Form.Label>
-                <Form.Control type="text" placeholder="Please input a date" />
-             </Form.Group>
 
-             <Form.Group controlId='contactinfo'>
+             <Form.Group controlId='contactInfo'>
                <Form.Label>Contact Info:</Form.Label>
-               <Form.Control type="text" placeholder="Enter your contact information" />
+               <Form.Control type="text" placeholder="Enter your contact information" defaultValue={this.props.contactInfo} />
               </Form.Group>
 
               <Form.Group controlId='groupSize'>
                 <Form.Label>How many in your group:</Form.Label>
-                <Form.Control type="text" placeholder="Enter amount of group members" />
+                <Form.Control type="text" placeholder="Enter amount of group members" defaultValue={this.props.groupSize}/>
               </Form.Group>
 
               <Form.Group controlId='insurance'>
                 <Form.Label>Do you have insurance:</Form.Label>
-                <Form.Control type="checkbox" />
+                <Form.Check type="checkbox" label="Yes" defaultChecked={this.props.insurance} />
               </Form.Group>
 
               <Form.Group controlId='photography'>
                 <Form.Label>Will you need professional photography:</Form.Label>
-                <Form.Control type="checkbox" />
+                <Form.Check type="checkbox" label="Yes" defaultChecked={this.props.photography}/>
               </Form.Group>
+
               <Button variant="primary" type="submit"> Submit </Button>
             </Form>
           </Modal.Body>
