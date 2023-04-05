@@ -14,22 +14,22 @@ class ScheduleForm extends React.Component {
 
              <Form.Group controlId='contactInfo'>
                <Form.Label>Contact Info:</Form.Label>
-               <Form.Control type="text" placeholder="Enter your contact information" />
+               <Form.Control type="text" placeholder="Enter your contact information" defaultValue={this.props.contactInfo} />
               </Form.Group>
 
               <Form.Group controlId='groupSize'>
                 <Form.Label>How many in your group:</Form.Label>
-                <Form.Control type="text" placeholder="Enter amount of group members" />
+                <Form.Control type="text" placeholder="Enter amount of group members" defaultValue={this.props.groupSize}/>
               </Form.Group>
 
               <Form.Group controlId='insurance'>
                 <Form.Label>Do you have insurance:</Form.Label>
-                <Form.Check type="checkbox" label="Yes" />
+                <Form.Check type="checkbox" label="Yes" defaultChecked={this.props.insurance} />
               </Form.Group>
 
               <Form.Group controlId='photography'>
                 <Form.Label>Will you need professional photography:</Form.Label>
-                <Form.Check type="checkbox" label="Yes" />
+                <Form.Check type="checkbox" label="Yes" defaultChecked={this.props.photography}/>
               </Form.Group>
 
               <Button variant="primary" type="submit"> Submit </Button>

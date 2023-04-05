@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import ScheduleForm from './ScheduleForm.js'
+import WeatherCard from './WeatherCard.js';
 // import Container from 'react-bootstrap/Container';
 // import Calendar from './Calendar.js';
 
@@ -9,7 +10,7 @@ class Home extends React.Component {
     super(props);
     this.state = {
       weather: [],
-      showModal: false,
+      showModal: true,
       appointment: '',
     }
   }
@@ -49,7 +50,7 @@ class Home extends React.Component {
 
     //TODO: build out a schedule object based off of the form data
     let scheduleObj = {
-      date: event.target.date.value,
+      // date: event.target.date.value,
       contactInfo: event.target.contactInfo.value,
       groupSize: event.target.groupSize.value,
       insurance: event.target.insurance.checked,
@@ -58,6 +59,7 @@ class Home extends React.Component {
     console.log(scheduleObj);
 
     this.postAppointment(scheduleObj);
+    this.handleCloseModal();
   }
   
 
@@ -134,7 +136,9 @@ class Home extends React.Component {
       <>
         <h1>Surfing America</h1>
 
-        <ScheduleForm handleAppointmentSubmit={this.handleAppointmentSubmit} handleCloseModal={this.handleCloseModal} handleOpenModal={this.handleOpenModal} />
+        <WeatherCard weather={this.state.weather} handleOpenModal={this.handleOpenModal}/>
+
+        <ScheduleForm handleAppointmentSubmit={this.handleAppointmentSubmit} handleCloseModal={this.handleCloseModal} handleOpenModal={this.state.showModal} />
 
       </>
     )

@@ -8,18 +8,29 @@ class WeatherCard extends React.Component {
   }
 
 
+
+
   render() {
     return (
-
-      <Card style={{ width: '18rem' }}>
-        <Card.Body>
-          <Card.Title>{this.NAME.OF.DATE.DATA}</Card.Title>
-          <Card.Text>
-            {this.NAME.OF.FORM.DATA}
-          </Card.Text>
-          <Button variant="primary" onClick={this.NAME.OF.FORM.HANDLER}>Update Here</Button>
-        </Card.Body>
-      </Card>
+      <>
+      {
+        this.props.weather.map((day, idx) => {
+          
+          return (<Card style={{ width: '18rem' }}>
+            <Card.Body>
+              <Card.Title>Water Temperature: {day.waterTemperature}</Card.Title>
+              <Card.Text>
+                Wave Height: {day.waveHeight}
+                Swell Height: {day.swellHeight}
+                Swell Period: {day.swellPeriod}
+                Swell Direction: {day.swellDirection}
+              </Card.Text>
+              <Button variant="primary" onClick={this.handleUpdateButton}>Schedule Appointment</Button>
+            </Card.Body>
+          </Card>
+        )})
+      }
+      </>
     );
   }
 }
