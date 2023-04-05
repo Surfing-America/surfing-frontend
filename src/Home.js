@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import ScheduleForm from './ScheduleForm.js'
-
+// import Container from 'react-bootstrap/Container';
+// import Calendar from './Calendar.js';
 
 class Home extends React.Component {
   constructor(props) {
@@ -10,7 +11,6 @@ class Home extends React.Component {
       weather: [],
       showModal: false,
       appointment: '',
-
     }
   }
 
@@ -62,21 +62,45 @@ class Home extends React.Component {
   
 
   // *** handler 2 - posts to the database ***
-  // postAppointment = async (scheduleObj) => {
-  //   try {
-  //     let url = `${process.env.REACT_APP_SERVER}/weather`
-  //     let createdAppointment = await axios.post(url, scheduleObj);
+  postAppointment = async (scheduleObj) => {
+    try {
+      let url = `${process.env.REACT_APP_SERVER}/calendar`
+      let createdAppointment = await axios.post(url, scheduleObj);
 
-  //     console.log(createdAppointment);
+      console.log(createdAppointment);
 
-  //     this.setState({
-  //       appointment: [...this.state., createdAppointment.data]
-  //     })
+      this.setState({
+        appointment: [...this.state.appointment, createdAppointment.data]
+      })
 
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // }
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
+  // *** update appointment ***
+  updateAppt = async (updatedAppointment) => {
+    try {
+      let url = `${process.env.REACT_APP_SERVER}//calendar/:calendarID${updatedAppointment._id}`
+
+      let updatedAppt = await axios.put(url, updatedAppointment)
+
+      let updatedAppointmentArray = this.state.updatedAppt.data.map(existingAppt => {
+        return existingAppt._id === updatedAppointment._id
+          ? updatedAppt.data
+          : updatedAppt
+      })
+      this.setState({
+        books: updatedAppointmentArray,
+        showForm: false
+      })
+    } catch (error) {
+
+      console.log(error.message)
+    }
+  }
+
+
 
   // *** delete appointment ***
   deleteAppointment = async (id) => {
@@ -84,7 +108,7 @@ class Home extends React.Component {
 
     try {
 
-      let url = `${process.env.REACT_APP_SERVER}/weatherData/${id}`
+      let url = `${process.env.REACT_APP_SERVER}//calendar/:calendarID/${id}`
       await axios.delete(url);
 
       let deletedAppointment = this.state.weatherData.filter(weather => weather._id !== id);
@@ -109,12 +133,12 @@ class Home extends React.Component {
     return (
       <>
         <h1>Surfing America</h1>
+
         <ScheduleForm handleAppointmentSubmit={this.handleAppointmentSubmit} handleCloseModal={this.handleCloseModal} handleOpenModal={this.handleOpenModal} />
+
       </>
     )
   }
 }
 
 export default Home;
-
-

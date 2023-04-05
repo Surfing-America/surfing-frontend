@@ -11,12 +11,8 @@ class ScheduleForm extends React.Component {
           </Modal.Header> 
           <Modal.Body> 
             <Form onSubmit={this.props.handleAppointmentSubmit}>
-              <Form.Group controlId='date'>
-                <Form.Label>Add Date:</Form.Label>
-                <Form.Control type="text" placeholder="Please input a date" />
-             </Form.Group>
 
-             <Form.Group controlId='contactinfo'>
+             <Form.Group controlId='contactInfo'>
                <Form.Label>Contact Info:</Form.Label>
                <Form.Control type="text" placeholder="Enter your contact information" />
               </Form.Group>
@@ -28,13 +24,14 @@ class ScheduleForm extends React.Component {
 
               <Form.Group controlId='insurance'>
                 <Form.Label>Do you have insurance:</Form.Label>
-                <Form.Control type="checkbox" />
+                <Form.Check type="checkbox" label="Yes" />
               </Form.Group>
 
               <Form.Group controlId='photography'>
                 <Form.Label>Will you need professional photography:</Form.Label>
-                <Form.Control type="checkbox" />
+                <Form.Check type="checkbox" label="Yes" />
               </Form.Group>
+
               <Button variant="primary" type="submit"> Submit </Button>
             </Form>
           </Modal.Body>
