@@ -2,6 +2,10 @@ import React from 'react';
 import axios from 'axios';
 import ScheduleForm from './ScheduleForm.js'
 import WeatherCard from './WeatherCard.js';
+import Login from './Login.js';
+import Logout from './Logout.js';
+import Profile from './Profile.js';
+
 // import Container from 'react-bootstrap/Container';
 // import Calendar from './Calendar.js';
 
@@ -135,6 +139,9 @@ class Home extends React.Component {
     return (
       <>
         <h1>Surfing America</h1>
+        <Login />
+        <Profile />
+        <Logout />
 
         <WeatherCard weather={this.state.weather} handleOpenModal={this.handleOpenModal}/>
 
