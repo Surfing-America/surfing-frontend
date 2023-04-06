@@ -7,6 +7,7 @@ import Logout from './Logout.js';
 import Profile from './Profile.js';
 import { withAuth0 } from "@auth0/auth0-react";
 import ApptCard from './ApptCard.js';
+// import UpdateForm from './UpdateForm.js';
 
 // import Container from 'react-bootstrap/Container';
 // import Calendar from './Calendar.js';
@@ -86,20 +87,24 @@ class Home extends React.Component {
     }
   }
 
-  // *** update appointment ***
+  // *** handler 3 - update appointment ***
   updateAppt = async (updatedAppointment) => {
+    console.log(updatedAppointment);
     try {
-      let url = `${process.env.REACT_APP_SERVER}//calendar/:calendarID${updatedAppointment._id}`
+      let url = `${process.env.REACT_APP_SERVER}/calendar/${updatedAppointment._id}`
+      console.log('UPDATE URL INFO: ', url);
 
       let updatedAppt = await axios.put(url, updatedAppointment)
 
-      let updatedAppointmentArray = this.state.updatedAppt.data.map(existingAppt => {
+      console.log('UPDATED APPT: ', updatedAppt);
+
+      let updatedAppointmentArray = this.state.appointment.map(existingAppt => {
         return existingAppt._id === updatedAppointment._id
           ? updatedAppt.data
-          : updatedAppt
+          : existingAppt
       })
       this.setState({
-        books: updatedAppointmentArray,
+        appointment: updatedAppointmentArray,
         showForm: false
       })
     } catch (error) {
@@ -110,19 +115,19 @@ class Home extends React.Component {
 
 
 
-  // *** delete appointment ***
+  // *** handler 4 - delete appointment ***
   deleteAppointment = async (id) => {
     console.log('Did this fire?');
 
     try {
 
-      let url = `${process.env.REACT_APP_SERVER}//calendar/:calendarID/${id}`
+      let url = `${process.env.REACT_APP_SERVER}/calendar/${id}`
       await axios.delete(url);
 
-      let deletedAppointment = this.state.weatherData.filter(weather => weather._id !== id);
+      let deletedAppointment = this.state.appointment.filter(appt => appt._id !== id);
 
       this.setState({
-        weather: deletedAppointment,
+        appointment: deletedAppointment,
       })
 
     } catch (error) {
@@ -149,7 +154,8 @@ class Home extends React.Component {
           <Logout />
 
           <ScheduleForm  handleCloseModal={this.handleCloseModal} handleOpenModal={this.state.showModal} handleAppointmentSubmit={this.handleAppointmentSubmit}/>
-          <ApptCard appt={this.state.appointment} handleOpenModal={this.updateAppt} />
+          <ApptCard appt={this.state.appointment} updateAppt={this.updateAppt} handleDeleteButton={this.deleteAppointment} handleCloseModal={this.handleCloseModal} handleOpenModal={this.state.showModal} />
+        
           </>
           
           :
