@@ -145,7 +145,7 @@ class Home extends React.Component {
     console.log('APPT DATA: ', this.state.appointment);
     return (
       <>
-        <h1>Surfing America</h1>
+        <h3>Todays Surfing Data</h3> 
         {
           this.props.auth0.isAuthenticated ?
           <>
