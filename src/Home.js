@@ -5,6 +5,8 @@ import WeatherCard from './WeatherCard.js';
 import Login from './Login.js';
 import Logout from './Logout.js';
 import Profile from './Profile.js';
+import { withAuth0 } from "@auth0/auth0-react";
+import ApptCard from './ApptCard.js';
 
 // import Container from 'react-bootstrap/Container';
 // import Calendar from './Calendar.js';
@@ -15,7 +17,7 @@ class Home extends React.Component {
     this.state = {
       weather: [],
       showModal: true,
-      appointment: '',
+      appointment: [],
     }
   }
 
@@ -135,21 +137,30 @@ class Home extends React.Component {
 
   render() {
     console.log('SURF DATA FROM BACKEND:', this.state.weather);
-
+    console.log('APPT DATA: ', this.state.appointment);
     return (
       <>
         <h1>Surfing America</h1>
-        <Login />
-        <Profile />
-        <Logout />
+        {
+          this.props.auth0.isAuthenticated ?
+          <>
+          
+          <Profile />
+          <Logout />
 
-        <WeatherCard weather={this.state.weather} handleOpenModal={this.handleOpenModal}/>
-
-        <ScheduleForm handleAppointmentSubmit={this.handleAppointmentSubmit} handleCloseModal={this.handleCloseModal} handleOpenModal={this.state.showModal} />
-
+          <ScheduleForm  handleCloseModal={this.handleCloseModal} handleOpenModal={this.state.showModal} handleAppointmentSubmit={this.handleAppointmentSubmit}/>
+          <ApptCard appt={this.state.appointment} handleOpenModal={this.updateAppt} />
+          </>
+          
+          :
+          <>
+          <Login />
+          <WeatherCard weather={this.state.weather} />
+          </>
+        }
       </>
     )
   }
 }
 
-export default Home;
+export default withAuth0(Home);
