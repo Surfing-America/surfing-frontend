@@ -13,10 +13,10 @@ class WeatherCard extends React.Component {
             <Card.Body>
               <Card.Title>Water Temperature: {day.waterTemperature}</Card.Title>
               <Card.Text>
-                Wave Height: {day.waveHeight}
-                Swell Height: {day.swellHeight}
-                Swell Period: {day.swellPeriod}
-                Swell Direction: {day.swellDirection}
+                Wave Height: {day.waveHeight}<br />
+                Swell Height: {day.swellHeight}<br />
+                Swell Period: {day.swellPeriod}<br />
+                Swell Direction: {day.swellDirection}<br />
               </Card.Text>
             </Card.Body>
           </Card>
