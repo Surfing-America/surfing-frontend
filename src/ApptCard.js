@@ -38,23 +38,23 @@ export default class ApptCard extends Component {
             this.props.appt.map((appointment, idx) => {
 
               return (<Card style={{ width: '18rem' }}>
-                 <Card.Body>
-              <Card.Title>Appointment</Card.Title>
-              <Card.Text>
-                Contact Email: {appointment.contactInfo}<br /> 
-                Group Size: {appointment.groupSize}<br /> 
-              </Card.Text>
-              <br /> 
-              <Button variant="primary" onClick={this.handleUpdateButton}>Update Appointment</Button>
-              <Button variant="danger" onClick={this.handleDeleteButton}>Delete Appointment</Button>
-            </Card.Body>
+                <Card.Body>
+                  <Card.Title>Appointment</Card.Title>
+                  <Card.Text>
+                    Contact Email: {appointment.contactInfo}<br />
+                    Group Size: {appointment.groupSize}<br />
+                  </Card.Text>
+                  <br />
+                  <Button variant="primary" onClick={() => { this.handleUpdateButton(appointment) }}>Update Appointment</Button>
+                  <Button variant="danger" onClick={() => { this.props.handleDeleteButton(appointment._id) }}>Delete Appointment</Button>
+                </Card.Body>
               </Card>
               )
             })
           }
         </>
         <>
-          <UpdateForm appointment={this.state.selectedAppt}handleOpenModal={this.state.showModal} updateAppt={this.props.updateAppt} handleCloseModal={this.handleCloseModal} />
+          <UpdateForm appointment={this.state.selectedAppt} handleOpenModal={this.state.showModal} updateAppt={this.props.updateAppt} handleCloseModal={this.handleCloseModal} />
         </>
       </>
     );
