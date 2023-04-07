@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# Team Agreement
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Code Fellows 301 Project Week Prep Documents
 
-## Available Scripts
+## Team Members
 
-In the project directory, you can run:
+* Alex Carr
+* Nick Brown
+* Ryan Eastman
+* Dasha Lewis
 
-### `npm start`
+## Accessibility Score
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Lighthouse Score](src/images/lighthouse.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Cooperation Plan
 
-### `npm test`
+* *Key Strengths -*
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  * Alex Carr: time management, goal oriented, great team    member, css
 
-### `npm run build`
+  * Nick Brown: researching, html, css
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  * Ryan Eastman: exposure to a lot of concepts, fantastic at defining the problem, very driven and dedicated to achieving goals
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  * Dasha Lewis: time-management, resource management, leadership skills, team-work oriented.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* *How We Can Implement Our Strengths as a Team -*
 
-### `npm run eject`
+  * Find applicable knowledge and refactor that knowledge for our project
+  * Great communication and friendly rapport to talk through problems together
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* *Which Professional Competencies Do We Want to Develop -*
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  * Nicholas Brown: technical/craft
+  * Dasha Lewis: technical/teamwork
+  * Alex Carr: technical/technical
+  * Ryan Eastman: teamwork/technical
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* *Approach Plan for the Day-to-Day -*
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  * Be available on weekdays from 0900 - 1700 PST
+  * Be reachable via slack as our primary source of communication
+  * Should we have to work independently, we will provide morning and evening updates to the group.
 
-## Learn More
+### Conflict Plan
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* *What will be your group’s process to resolve conflict, when it arises?*
+  * Ryan volunteered to resolve conflict with a patient and understanding neutral perspective. And if Ryan is the problem, the whole team will work as a cohesive unit to attack swiftly and mercilessly to end the threat as effectively as possible.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* *What will the team do if one person is taking over the project and not letting the other mambers contribute?*
+  * We will approach the individual as a team, or elect a single representative to engage the solo worker and engage in a discussion that emphasizes the importance of teamwork.
 
-### Code Splitting
+* *How will you approach each other and the challenges of the project knowing that it is impossible for all members to be at the exact same place in understanding and skill level?*
+  * Try your best, but if you feel if you don't think you're getting things done, then bring it up sooner rather than later. Ask each other for a "second eye" when you feel like you've been staring at something too long. Don't be afraid to level set, break it down barney style, draw it out, ask the question several different ways to figure out the missing link.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* *How will you raise concerns to members who are not adequately contributing?*
+  * We will have 1-on-1 discussion. Responsbility will fall upon the individual who notices it first to bring up the issue immediately.
 
-### Analyzing the Bundle Size
+* *How and when will you escalate the conflict if your resolution attempts are unsuccessful?*
+  * Should all attempts at a peaceful resolution fail, speed and violence of action will be the ultimate checkmate. But we could probably call in some help from Audrey before we resort to violence.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Communication Plan
 
-### Making a Progressive Web App
+* *What hours will you be available to communicate?*
+  * 9am to 12pm work block, 12pm to 1pm lunch break, 1pm to 5pm work block.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* *What platforms will you use to communicate (ie. Slack, phone …)?*
+  * Primary Communication: Slack
+  * Secondary Communication: Phone
 
-### Advanced Configuration
+* *How often will you take breaks?*
+  * 10 minutes break every hour, use the 15 minute rule for problems.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* *What is your plan if you start to fall behind?*
+  * Announce that you are falling behind sooner rather than later, consider changing up project responsbilities
 
-### Deployment
+* *How will you communicate after hours and on the weekend?*
+  * Slack, but remember to honor our work agreement, being flexible with each other
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* *What is your strategy for ensuring everyone’s voice is heard?*
+  * Check in with each other in our daily team meet ups.
 
-### `npm run build` fails to minify
+* *How will you ensure that you are creating a safe environment where everyone feels comfortable speaking up?*
+  * Being aware, Having fun, Remembering that there is no such thing as a coding emergency, let's rely on each other to keep on the same step, incorporate code review once in awhile.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Work Plan
+
+* *How you will identify tasks, assign tasks, know when they are complete, and manage work in general?*
+  * Trello Board
+
+* *What project management tool will be used?*
+  * Trello Board
+
+### Presentation Deck
+
+* Link: https://docs.google.com/presentation/d/1DE3TTW_zPF9Gd4utvoBn1Wr1k6TDEA3Xwy1tow9dss4/edit?usp=sharing
+
+### Practice Session
+
+* Date:
+* Time:
+
+### Git Process
+
+* *What components of your project will live on GitHub?*
+
+* *How will you share the repository with your teammates?*
+
+* *What is your Git flow?*
+
+* *Will you be using a PR review workflow? If so, consider:*
+  * *How many people must review a PR?*
+
+    * Who merges PRs?
+    * How often will you merge?
+    * How will you communicate that it’s time to merge?
+
